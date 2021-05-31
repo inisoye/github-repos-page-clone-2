@@ -2,7 +2,7 @@ const baseUrl = 'https://api.github.com/graphql';
 
 const headers = {
   'Content-Type': 'application/json',
-  authorization: 'bearer ' + import.meta.env.VITE_GITHUB_TOKEN,
+  authorization: 'bearer ' + process.env.VITE_GITHUB_TOKEN,
 };
 
 const getRepos = async (selectedUser) => {
