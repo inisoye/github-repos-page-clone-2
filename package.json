@@ -2,11 +2,14 @@
   "name": "github-repos-page-clone-2",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "clean": "rimraf ./development && rimraf -rf ./.cache",
+    "dev": "npm run clean && parcel index.html repositories.html --out-dir development -p 3000",
+    "build": "parcel build --no-minify index.html repositories.html --out-dir dist --public-url ./"
   },
   "devDependencies": {
-    "vite": "^2.3.4"
-  }
+    "parcel-bundler": "^1.12.5"
+  },
+  "browserslist": [
+    "since 2017-06"
+  ]
 }
