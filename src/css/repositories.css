@@ -1020,8 +1020,14 @@ h6 {
 }
 
 .h-clicked-form .header-form__input {
-  color: var(--text-primary);
   margin-right: 0;
+  color: var(--bg-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .h-clicked-form .header-form__input {
+    color: var(--text-primary);
+  }
 }
 
 .h-clicked-form .header-form__input::-webkit-input-placeholder {
