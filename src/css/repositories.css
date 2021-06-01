@@ -1229,7 +1229,7 @@ h6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--input-bg);
+  background-color: transparent;
   border: 1px solid var(--border-header-search);
   border-radius: 6px;
   display: -webkit-box;
@@ -1244,6 +1244,12 @@ h6 {
 
 .header-form:focus-within {
   border: 1px solid var(--border-hover-selected-state);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header-form {
+    background-color: var(--input-bg);
+  }
 }
 
 @media (min-width: 768px) {
