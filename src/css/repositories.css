@@ -1267,11 +1267,17 @@ h6 {
 .header-form__input {
   background-color: transparent;
   border: 0;
-  color: var(--text-primary);
   font-size: 1.4rem;
   min-height: 28px;
   padding: 0 12px;
   width: 100%;
+  color: var(--bg-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header-form__input {
+    color: var(--text-primary);
+  }
 }
 
 .header-form__input::-webkit-input-placeholder {
